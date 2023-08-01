@@ -1,3 +1,7 @@
+FORK WITHOUT TEST DATA FOR QUICK DOWNLOAD TIME! 
+README.md and other files might not be up to date.
+
+
 -> Make sure that you don't execute the SBGrid shell script otherwise some python programs get installed in the SBGrid path!
 ---------------------------------------------------------------------------
 Install Homebrew:
