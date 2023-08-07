@@ -316,7 +316,7 @@
 	do_default_tab: False
 
 	TabbedPanelItem:
-		text: 'Master Key'
+		text: 'Master Key'  
 		BoxLayout:
 			spacing: 10
 			orientation: 'vertical'
@@ -384,7 +384,7 @@
 						Label:
 							text: 'Star File Paths'
 							color: (0,0,0,1)
-							font_size: 30
+							font_size: root.font_size_selected + 10
 							bold: True
 							size_hint: .6, .1
 							pos_hint: {'center_x': .5, 'center_y': .5}
@@ -395,7 +395,7 @@
 							TextInput:
 								text: 'Choose Unfiltered Star File Path'
 								size_hint: 1.5, .55
-								font_size: 25
+								font_size: root.font_size_selected + 5
 								halign: 'center'
 								pos_hint: {'center_x': .5, 'center_y': .5}
 								id: mainstar
@@ -421,7 +421,7 @@
 							TextInput:
 								text: 'Choose Filtered Star File Path'
 								size_hint: 1.5, .55
-								font_size: 25
+								font_size: root.font_size_selected + 5
 								halign: 'center'
 								pos_hint: {'center_x': .5, 'center_y': .5}
 								id: mainstarfilt
@@ -452,7 +452,7 @@
 						Label:
 							text: 'Subtomogram directory'
 							color: (0,0,0,1)
-							font_size: 30
+							font_size: root.font_size_selected + 10
 							bold: True
 							size_hint: .6, .1
 							pos_hint: {'center_x': .5, 'center_y': .5}
@@ -463,7 +463,7 @@
 							TextInput:
 								text: 'Choose Subtomogram Directory'
 								size_hint: 1.5, .55
-								font_size: 25
+								font_size: root.font_size_selected + 5
 								halign: 'center'
 								pos_hint: {'center_x': .5, 'center_y': .5}
 								id: mainsubtomo
@@ -494,7 +494,7 @@
 						Label:
 							text: 'mrc directory'
 							color: (0,0,0,1)
-							font_size: 30
+							font_size: root.font_size_selected + 10
 							bold: True
 							size_hint: .6, .1
 							pos_hint: {'center_x': .5, 'center_y': .5}
@@ -505,7 +505,7 @@
 							TextInput:
 								text: 'Choose Mrc Directory'
 								size_hint: 1.5, .55
-								font_size: 25
+								font_size: root.font_size_selected + 5
 								halign: 'center'
 								pos_hint: {'center_x': .5, 'center_y': .5}
 								id: mainmrc
@@ -541,7 +541,7 @@
 						TextInput:
 							text: '/opt/sbgrid/i386-mac/chimerax/1.6.1/ChimeraX.app/Contents/bin'
 							multiline: False
-							font_size: 25
+							font_size: root.font_size_selected + 5
 							size_hint: .8, .25
 							pos_hint: {'center_x': .5, 'center_y': .5}
 							id: chimera_path
@@ -562,27 +562,27 @@
 							text: 'Save project to directory:'
 							size_hint_y: .3
 							color: (0,0,0,1)
-							font_size: 30
+							font_size: root.font_size_selected + 10
 							bold: True
 						TextInput:
 							id: save
 							hint_text: '/.../...'
 							multiline: False
 							size_hint: .7, .35
-							font_size: 22.5
+							font_size: root.font_size_selected + 2.5
 							pos_hint: {'center_x': .5, 'center_y': .5}
 						Label: 
 							text: 'Project name:'
 							size_hint_y: .3
 							color: (0,0,0,1)
-							font_size: 30
+							font_size: root.font_size_selected + 10
 							bold: True
 						TextInput:
 							id: savename
 							hint_text: 'project'
 							multiline: False
 							size_hint: .7, .35
-							font_size: 25
+							font_size: root.font_size_selected + 5
 							pos_hint: {'center_x': .5, 'center_y': .5}
 						Label:
 							size_hint_y: .1
@@ -606,7 +606,7 @@
 							text: 'Load project path:'
 							size_hint_y: .3
 							color: (0,0,0,1)
-							font_size: 30
+							font_size: root.font_size_selected + 10
 							bold: True
 						TextInput:
 							id: pullpath
@@ -643,7 +643,7 @@
 				Label: 
 					text: 'Filter Subtomograms'
 					color: (0,0,0,1)
-					font_size: 35
+					font_size: root.font_size_selected + 15
 					size_hint_y: .6
 					bold: True
 				Button:
@@ -732,7 +732,7 @@
 						Label:
 							text: ' '
 							color: (.6,0,0,1)
-							font_size: 22
+							font_size: root.font_size_selected + 2
 							size_hint_y: .1
 					BoxLayout:
 						orientation: 'vertical'
@@ -751,7 +751,7 @@
 						Label:
 							text: 'recommended range: 0.9 to 1.2'
 							color: (.6,0,.6,1)
-							font_size: 22
+							font_size: root.font_size_selected + 2
 							size_hint_y: .1
 					BoxLayout:
 						orientation: 'vertical'
@@ -770,7 +770,7 @@
 						Label:
 							text: ' '
 							color: (.6,0,0,1)
-							font_size: 22
+							font_size: root.font_size_selected + 2
 							size_hint_y: .1
 					BoxLayout:
 						orientation: 'vertical'
@@ -786,7 +786,7 @@
 						Label:
 							text: ' '
 							color: (.6,0,0,1)
-							font_size: 22
+							font_size: root.font_size_selected + 2
 							size_hint_y: .1
 				BoxLayout:
 					orientation: 'vertical'
@@ -813,7 +813,7 @@
 						Label:
 							text: 'for Titan Krios'
 							color: (.6,0,.6,1)
-							font_size: 22
+							font_size: root.font_size_selected + 2
 							size_hint_y: .1
 					BoxLayout:
 						orientation: 'vertical'
@@ -832,7 +832,7 @@
 						Label:
 							text: 'for Titan Krios'
 							color: (.6,0,.6,1)
-							font_size: 22
+							font_size: root.font_size_selected + 2
 							size_hint_y: .1
 					BoxLayout:
 						orientation: 'vertical'
@@ -851,7 +851,7 @@
 						Label:
 							text: 'for Titan Krios'
 							color: (.6,0,.6,1)
-							font_size: 22
+							font_size: root.font_size_selected + 2
 							size_hint_y: .1
 					BoxLayout:
 						orientation: 'vertical'
@@ -870,7 +870,7 @@
 						Label:
 							text: ' '
 							color: (.6,0,0,1)
-							font_size: 22
+							font_size: root.font_size_selected + 2
 							size_hint_y: .1
 				Label:
 					size_hint_y: .4
@@ -913,7 +913,7 @@
 				Label: 
 					text: 'Coord re-picker'
 					color: (0,0,0,1)
-					font_size: 35
+					font_size: root.font_size_selected + 15
 					pos_hint: {'center_x': .15}
 					bold: True
 					size_hint_y: .08
@@ -1130,7 +1130,7 @@
 							Label:
 								text: 'Create Mask'
 								color: (0,0,0,1)
-								font_size: 35
+								font_size: root.font_size_selected + 15
 								pos_hint: {'center_x': .2, 'center_y': .01}
 								bold: True
 							Spinner:
@@ -1198,7 +1198,7 @@
 								size_hint_y: .2
 								text: ''
 								color: (.6,0,0,1)
-								font: 25
+								font: root.font_size_selected + 5
 								id: maskwarning
 							Button:
 								background_color: 0.2, 0.6, 0.2, .55
@@ -1227,7 +1227,7 @@
 						Label:
 							text: '3D Signal Subtraction'
 							color: (0,0,0,1)
-							font_size: 35
+							font_size: root.font_size_selected + 15
 							pos_hint: {'center_x': .2}
 							bold: True
 						Button:
@@ -1242,12 +1242,12 @@
 							text: 'Mask path'
 							bold: True
 							color: (0,0,0,1)
-							font: 30
+							font: root.font_size_selected + 10
 							size_hint_y: .6
 						TextInput:
 							text: 'Choose Mask Path (mask.mrc)'
 							size_hint: .9, .9
-							font_size: 30
+							font_size: root.font_size_selected + 10
 							halign: 'center'
 							pos_hint: {'center_x': .5, 'center_y': .5}
 							id: maskpath
@@ -1428,7 +1428,7 @@
 						Label:
 							text: 'Display and Select Subtomograms'
 							color: (0,0,0,1)
-							font_size: 35
+							font_size: root.font_size_selected + 15
 							pos_hint: {'center_x': .25}
 							bold: True
 							size_hint_y: .55
@@ -1513,7 +1513,7 @@
 							id: visualizefeedback
 							text: 'View subtomogram'
 							color: (0,0,.6,1)
-							font_size: 30
+							font_size: root.font_size_selected + 10
 						BoxLayout:
 							orientation: 'horizontal'
 							pos_hint: {'center_x': .5, 'center_y': .5}
@@ -1555,7 +1555,7 @@
 						Label:
 							text: 'Tomogram Plot Back'
 							color: (0,0,0,1)
-							font_size: 35
+							font_size: root.font_size_selected + 15
 							pos_hint: {'center_x': .15}
 							bold: True
 						Button:
@@ -1639,7 +1639,7 @@
 						Label:
 							text: 'Random 180 Degree Flip Star File'
 							color: (0,0,0,1)
-							font_size: 35
+							font_size: root.font_size_selected + 15
 							pos_hint: {'center_x': .37}
 							bold: True
 							size_hint_y: .6
@@ -1724,7 +1724,7 @@
 							text: ''
 							id: randaxis
 							color: (.6,0,0,1)
-							fontsize: 25
+							fontsize: root.font_size_selected + 5
 
 					Label:
 						size_hint_x: .05
@@ -1742,7 +1742,7 @@
 						Label:
 							text: 'Calculate CCC - Two Volumes'
 							color: (0,0,0,1)
-							font_size: 35
+							font_size: root.font_size_selected + 15
 							pos_hint: {'center_x': .34}
 							bold: True
 						Button:
@@ -1804,7 +1804,7 @@
 					Label:
 						text: 'Volume & Star File'
 						color: (0,0,0,1)
-						font_size: 35
+						font_size: root.font_size_selected + 15
 						pos_hint: {'center_x': .15}
 						bold: True
 					Button:
@@ -1902,7 +1902,7 @@
 						Label:
 							text: 'Rotate Subtomograms using Star File'
 							color: (0,0,0,1)
-							font_size: 35
+							font_size: root.font_size_selected + 15
 							pos_hint: {'center_x': .25}
 							bold: True
 							size_hint_y: .8
@@ -1946,7 +1946,7 @@
 						Label:
 							text: 'Rotate Subtomograms Manually'
 							color: (0,0,0,1)
-							font_size: 35
+							font_size: root.font_size_selected + 15
 							pos_hint: {'center_x': .22}
 							bold: True
 							size_hint_y: .8
@@ -2032,7 +2032,7 @@
 						Label: 
 							size_hint_y: .2
 							text: ''
-							font_size: 25
+							font_size: root.font_size_selected + 5
 							pos_hint: {'center_y': .5}
 							color: (.6,0,0,1)
 							id: noaxis
@@ -2111,7 +2111,7 @@
 				Label:
 					text: 'Calculate Rotations'
 					color: (0,0,0,1)
-					font_size: 35
+					font_size: root.font_size_selected + 15
 					pos_hint: {'center_x': .2}
 					size_hint_y: .7
 					bold: True
@@ -2267,7 +2267,7 @@
 				Label:
 					text: 'Parsing'
 					color: (0,0,0,1)
-					font_size: 35
+					font_size: root.font_size_selected + 15
 					pos_hint: {'center_x': .15}
 					bold: True
 					size_hint_y: .2
@@ -2327,7 +2327,7 @@
 						TextInput:
 							text: 'Choose Star File Path'
 							size_hint: 1.5, .55
-							font_size: 28
+							font_size: root.font_size_selected + 8
 							halign: 'center'
 							pos_hint: {'center_x': .5, 'center_y': .5}
 							id: restar

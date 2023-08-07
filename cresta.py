@@ -5,6 +5,7 @@ kivy.require('2.1.0')
 
 #python packages
 import os, subprocess
+import getopt
 from subprocess import call
 from threading import Thread
 import re
@@ -53,8 +54,24 @@ from kivy.uix.textinput import TextInput
 from kivy.core.window import Window
 Window.size = (900,800)
 
+
+def getFontSize(argv):
+	opts, args = getopt.getopt(argv,"hc:", ["fontsize="])
+	for opt, arg in opts:
+		if opt == '--fontsize':
+			return(int(arg))
+		else:
+			return(20)
+
+if(len(sys.argv) > 1):
+	argv = sys.argv[1:]
+	font_size_value = getFontSize(argv)
+else:
+	font_size_value = 20
+
 #importing kivy file
 Builder.load_file(os.getcwd() + '/gui.kv')
+
 
 class Cresta(App):
 
@@ -96,7 +113,7 @@ class MaskFinder(FloatLayout):
 
 #giving buttons functionality
 class Tabs(TabbedPanel):
-
+	font_size_selected = font_size_value
 	label = Label(text="Sigma")
 	label2 = Label(text=" ", size_hint_y=.8)
 	sigma = TextInput(text="5", multiline=False, size_hint_x=.12, size_hint_y=1.9, pos_hint={'center_x': .5, 'center_y': .5})
@@ -1841,4 +1858,6 @@ class Tabs(TabbedPanel):
 	pass
 
 #run CrESTA
+
+
 Cresta().run()
